@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシー ポリシー | 配信準備アシスト</title>
+<meta name="description" content="配信準備アシストが扱う情報と、YouTube API サービスの使い方。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>プライバシー ポリシー</h1>
+  <p class="meta">配信準備アシスト / 制定日: 2026 年 10 月 17 日</p>
+
+  <h2>基本の考え方</h2>
+  <p>配信準備アシスト(以下「このアプリ」)は、利用者の PC の中だけで動くデスクトップ アプリです。提供元はサーバーを持たず、利用者の情報を受け取ったり集めたりしません。</p>
+  <p>このアプリが読む PC の中のファイル(OBS の設定・素材のファイルなど)と、利用者が登録した内容は、利用者の PC の中に保存されます。提供元や第三者へは送りません。</p>
+
+  <h2>YouTube API サービスの利用</h2>
+  <p>このアプリは、YouTube との連携に YouTube API サービスを使います。連携は任意で、利用者が「Google でログイン」を押して許可したときだけ有効になります。</p>
+  <p>YouTube との連携を使う利用者は、<a href="https://www.youtube.com/t/terms">YouTube 利用規約</a> に同意したものとみなされます。Google による情報の扱いは <a href="https://policies.google.com/privacy">Google プライバシー ポリシー</a> を参照してください。</p>
+  <p>許可を求める権限は「YouTube アカウントの管理」の 1 つです。この権限で、次のことだけを行います。</p>
+  <ul>
+    <li>つないだチャンネルの名前を読み、画面に出す</li>
+    <li>ストリームキーの一覧を、名前だけ読む(キーそのものは受け取りません)</li>
+    <li>動画のカテゴリの一覧を読む</li>
+    <li>利用者が「配信枠を立てる」を押したときに、配信枠を作り、選んだストリームキーにつなぎ、タイトル・概要欄・タグ・カテゴリを入れる</li>
+  </ul>
+
+  <h2>保存する情報と保存場所</h2>
+  <ul>
+    <li>クライアント ID・クライアント シークレット(利用者が入力したもの)</li>
+    <li>リフレッシュトークン(ログインを続けるための鍵)</li>
+    <li>つないだチャンネルの名前</li>
+    <li>立てた配信枠の記録(動画 ID・タイトル・開始日時・公開設定)</li>
+  </ul>
+  <p>これらは利用者の PC の中にだけ保存します。クライアント シークレットとリフレッシュトークンは、Windows の仕組みで暗号化して保存します。暗号化が使えない PC ではファイルに書かず、アプリを閉じると消えます。</p>
+  <p>これらの情報を送る先は、Google(YouTube)だけです。広告・アクセス解析・第三者への提供には使いません。</p>
+  <p>Google API サービスから受け取った情報の扱いは、<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API サービスのユーザーデータに関するポリシー</a>(限定使用の要件を含む)に従います。</p>
+
+  <h2>連携の解除と情報の削除</h2>
+  <ul>
+    <li>アプリの「連携を解除」を押すと、Google にリフレッシュトークンの取り消しを送り、PC に保存したリフレッシュトークンとチャンネル名を消します。</li>
+    <li>Google アカウントの <a href="https://myaccount.google.com/connections">サードパーティ製のアプリとサービス</a> からも、いつでも許可を取り消せます。</li>
+    <li>アプリをアンインストールしたあとに残る保存データは、利用者の PC の <code>%APPDATA%\stream-prep</code> フォルダを消すと削除できます。</li>
+  </ul>
+
+  <h2>このポリシーの変更</h2>
+  <p>内容を変えるときは、このページを更新し、制定日の横に改定日を書きます。</p>
+
+  <h2>問い合わせ</h2>
+  <p>このページのリポジトリの <a href="https://github.com/tsuzuri-naoto/stream-prep-site/issues">Issues</a> から連絡してください。</p>
+
+  <footer>
+    <p>提供: 綴 尚音</p>
+    <p><a href="index.html">配信準備アシスト</a></p>
+  </footer>
+</main>
+</body>
+</html>
